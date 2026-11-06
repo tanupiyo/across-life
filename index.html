@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>あくろすLIFE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="app">
+
+  <header class="header">
+    <div>
+      <h1>ACROSS LIFE</h1>
+      <p>めじろうと暮らす、あくろすの毎日。</p>
+    </div>
+    <div class="point-display">
+      ⭐ <span id="pointCount">0</span> pt
+    </div>
+  </header>
+
+  <main>
+
+    <section class="room-section">
+      <div class="room-heading">
+        <div>
+          <p class="eyebrow">MY LITTLE ROOM</p>
+          <h2>めじろうのお部屋</h2>
+        </div>
+        <span class="level" id="level">LEVEL 1</span>
+      </div>
+
+      <div class="room">
+        <div class="window">
+          <div class="sun"></div>
+          <div class="cloud">☁</div>
+        </div>
+
+        <div class="room-decoration plant">🪴</div>
+        <div class="room-decoration shelf">📚</div>
+
+        <div class="pet-area">
+          <div id="pet3d"></div>
+          <div class="pet" id="pet">🐦</div>
+          <h3 id="characterName">めじろう</h3>
+          <p id="characterMessage">今日もお部屋でのんびり。</p>
+        </div>
+
+        <div class="nest">⌒⌒⌒</div>
+        <div class="floor"></div>
+      </div>
+
+      <div class="growth-card">
+        <div class="growth-info">
+          <span>次の成長まで</span>
+          <span id="visitCount">来館回数：0回</span>
+        </div>
+        <div class="growth-bar">
+          <div id="growthProgress"></div>
+        </div>
+        <p id="growthMessage">あくろすに遊びに来てね！</p>
+      </div>
+      <div id="familySummary" class="family-summary" aria-live="polite"></div>
+    </section>
+
+    <section class="care-section">
+      <h2>めじろうと遊ぼう</h2>
+      <p>気が向いたときに、ちょっとだけ。</p>
+
+      <div class="care-buttons">
+        <button id="feedBtn">
+          <span>🍎</span>
+          ごはん
+        </button>
+        <button id="petBtn">
+          <span>💗</span>
+          なでる
+        </button>
+        <button id="playBtn">
+          <span>🎵</span>
+          遊ぶ
+        </button>
+      </div>
+
+      <p id="careMessage"></p>
+    </section>
+
+    <section class="visit-section">
+      <div>
+        <p class="eyebrow">ACROSS VISIT</p>
+        <h2>あくろすに来館しよう！</h2>
+        <p>来館すると、めじろうが成長するよ。</p>
+      </div>
+      <button id="checkinBtn">来館チェックイン</button>
+      <p id="checkinMessage"></p>
+    </section>
+
+  </main>
+
+  <nav class="bottom-nav">
+    <div class="active" aria-current="page">🏠<span>お部屋</span></div>
+    <div aria-disabled="true" title="準備中">👕<span>クローゼット</span></div>
+    <div aria-disabled="true" title="準備中">🛍️<span>ショップ</span></div>
+    <div aria-disabled="true" title="準備中">📖<span>アルバム</span></div>
+  </nav>
+
+  <footer>
+    ACROSS LIFE | 調布市市民プラザあくろす
+  </footer>
+
+  <script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+
+  <script src="script.js"></script>
+  <script type="module" src="model.js"></script>
+
+</body>
+</html>
